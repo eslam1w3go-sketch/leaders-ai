@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: leaders-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5
+      - key: ADMIN_PASSWORD
+        sync: false
